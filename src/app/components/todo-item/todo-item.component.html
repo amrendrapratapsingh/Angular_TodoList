@@ -1,3 +1,14 @@
-<li>{{todo.id}}</li>
-<li>{{todo.title}}</li>
-<li>{{todo.completed}}</li>
+<div [ngClass]="setClasses()">
+  <p>
+  <input
+     type="checkbox"
+     (change)="onToggle(todoFor)"
+     />
+   {{todoFor.title}}
+  <button
+    class="del"
+    (click)="onDelete(todoFor)"
+     >X</button>
+</p>
+
+</div>
